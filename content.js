@@ -105,4 +105,10 @@ function checkDOMChange()
     setTimeout( checkDOMChange, 150 );
 }
 
-checkDOMChange();
+if ($(".gb_b.gb_db.gb_R") != undefined ) {
+	if ($(".gb_b.gb_db.gb_R").attr("title") != undefined){
+		if ($(".gb_b.gb_db.gb_R").attr("title").includes("@princeton.edu")){
+			checkDOMChange();
+		}
+	}
+}
