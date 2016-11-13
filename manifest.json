@@ -1,0 +1,21 @@
+{
+"manifest_version": 2,
+    "name": "Princeton Vision",
+    "description": "Connect Tigerbook to Gmail.",
+    "version": "1.0",
+    "browser_action": {
+       "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://mail.google.com/*"
+            ],
+            "js": [
+                "jquery.min.js",
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
